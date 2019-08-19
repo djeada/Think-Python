@@ -21,7 +21,7 @@ def contains_e(word):
 
 how_many = [word for word in word_list if contains_e(word)]
 
-print(float(len(how_many)) / len(word_list)))
+print(float(len(how_many)) / len(word_list))
 
 
 
