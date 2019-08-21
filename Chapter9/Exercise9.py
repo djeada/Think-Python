@@ -13,7 +13,7 @@ In other words, it would have happened
 8 times over all. So the question is, how old am I now?”
 '''
 
-def is_anagram(a,b):
+def is_reverse(a,b):
     if str(a) == str(b)[::-1]:
         return True
     return False
@@ -34,7 +34,7 @@ def generate_ages():
     diff = 9
     while diff < 80:
         while a < 90: 
-            if is_anagram(a,a+diff):
+            if is_reverse(a,a+diff):
                 add_diff(dictionary,diff)
             a += 1
         a = 10
@@ -47,7 +47,7 @@ generate_ages()
 def how_old_is_she(diff):
     counter = 0
     for i in range(100):
-        if is_anagram(i,i+diff):
+        if is_reverse(i,i+diff):
             counter += 1
             if counter == 6:
                 print('Daughter is now ', i, ' years old.')
