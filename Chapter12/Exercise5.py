@@ -54,6 +54,7 @@ def is_reducible(word, word_list):
         
     for child in child_list(word, word_list):
         if child not in word_list:
+            memo[word] = False
             return False
         else:
             return is_reducible(child,word_list)
@@ -63,7 +64,7 @@ def find_longest(word_list):
     for word in word_list:
         if is_reducible(word, word_list):
             if len(word) > len(longest):
-                logest = word
+                longest = word
     return longest
 
 print(is_reducible('temperances',word_list))
