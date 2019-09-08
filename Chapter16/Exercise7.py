@@ -47,31 +47,31 @@ time_to_next_birthday(Birthday(1995,11,2))
 
 
 def find_older(b1,b2):
-    return (b1.year,b1.month,b1.day) > (b2.year,b2.month,b2.day) ? (b1,b2) : (b2,b1)
+    return (b1,b2) if (datetime.datetime(b1.year,b1.month,b1.day)-datetime.datetime(b2.year,b2.month,b2.day)).days < 0 else (b2,b1)
+
+def return_date(date):
+    return '%.2d-%.2d-%.2d' % (date.year, date.month, date.day)
+
 
 def find_double_day(b1, b2):
 
     st = find_older(b1,b2)
+    date = datetime.datetime(st[1].year,st[1].month,st[1].day)
 
-    if st[0].year < st[1].year:
-        x = st[0].day + 365*(st[0].day-st[1].day)
-        y = st[1].day
-        while x != 2*y
-            x+=1
-            y+=1
-        x = 
-
-    elif st[0].month < st[2].year:
-f_date = date(2014, 7, 2)
-l_date = date(2014, 7, 11)
-delta = l_date - f_date
-print(delta.days)
-    else:
+    x = (datetime.datetime(st[1].year,st[1].month,st[1].day)-datetime.datetime(st[0].year,st[0].month,st[0].day)).days
+    y = 0
     
+    while x != 2*y:
+        x+=1
+        y+=1
+        date += datetime.timedelta(days=1)
 
-    date_at_twice_age = person2 + datetime.timedelta(days=p2)
-    print(date_at_twice_age, '\n', 'person 1 was %d days old, and person 2 was %d days old' % (p1, p2))
+    print(return_date(date))
+    print('Older guy was ', (date - datetime.datetime(st[0].year,st[0].month,st[0].day)).days, ' days old, and younger dude was ', (date - datetime.datetime(st[1].year,st[1].month,st[1].day)).days, ' days old')
 
+find_double_day(Birthday(2012,7,18), Birthday(1997,6,12))
+
+'''
 def find_n_times_day(b.day1, b.day2, n):
     person1 = datetime.date(*b.day1)
     person2 = datetime.date(*b.day2)
