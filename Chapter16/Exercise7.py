@@ -71,24 +71,23 @@ def find_double_day(b1, b2):
 
 find_double_day(Birthday(2012,7,18), Birthday(1997,6,12))
 
-'''
-def find_n_times_day(b.day1, b.day2, n):
-    person1 = datetime.date(*b.day1)
-    person2 = datetime.date(*b.day2)
 
-    age_diff = -(person1 - person2)
 
-    p1 = int(age_diff.days)
-    p2 = 0
+def find_n_times_day(b1, b2, n):
 
-    while p2 * n != p1:
-        if p2 * n > p1:
+    st = find_older(b1,b2)
+    date = datetime.datetime(st[1].year,st[1].month,st[1].day)
+
+    x = (datetime.datetime(st[1].year,st[1].month,st[1].day)-datetime.datetime(st[0].year,st[0].month,st[0].day)).days
+    y = 0
+
+    while x != n*y:
+        if n*y > x:
             print('This never precisely occurred')
             return None
-        p1 += 1
-        p2 += 1
+        x+=1
+        y+=1
+        date += datetime.timedelta(days=1)
 
-    date_at_n_times_age = person2 + datetime.timedelta(days=p2)
-
-    print(date_at_n_times_age, '\n', 'person 1 was %d days old, and person 2 was %d days old' % (p1, p2))
-'''
+    print(return_date(date))
+    print('Older guy was ', (date - datetime.datetime(st[0].year,st[0].month,st[0].day)).days, ' days old, and younger dude was ', (date - datetime.datetime(st[1].year,st[1].month,st[1].day)).days, ' days old')
