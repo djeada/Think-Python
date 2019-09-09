@@ -1,93 +1,44 @@
 '''
 Exercise 7
-The datetime module provides date and time objects that are similar to the
-Date and Time objects in this chapter, but they provide a rich set of methods
-and operators. Read the documentation at
-http://docs.python.org/2/library/datetime.html.
+This exercise is a cautionary tale about one of the most common, and difficult
+to find, errors in Python. Write a definition for a class named Kangaroo with
+the following methods:
+An __init__ method that initializes an attribute named pouch_contents to an
+empty list. A method named put_in_pouch that takes an object of any type and
+adds it to pouch_contents. A __str__ method that returns a string
+representation of the Kangaroo object and the contents of the pouch. Test your
+code by creating two Kangaroo objects, assigning them to variables named kanga
+and roo, and then adding roo to the contents of kanga’s pouch.
+Download http://thinkpython.com/code/BadKangaroo.py. It contains a solution to
+the previous problem with one big, nasty bug. Find and fix the bug.
 
-1. Use the datetime module to write a program that gets the current date and
-prints the day of the week.
-2. Write a program that takes a birthday as input and prints the user’s age and the number of days, hours, minutes and seconds until
-their next birthday.
-3. For two people born on different days, there is a day when one is twice as
-old as the other. That’s their Double Day. Write a program that takes two
-birthdays and computes their Double Day.
-4. For a little more challenge, write the more general version that computes
-the day when one person is n times older than the other.
+If you get stuck, you can download http://thinkpython.com/code/GoodKangaroo.py, which explains the problem and demonstrates a solution.
 '''
 
-import datetime
-
-def print_date_and_day_of_week():
-    date = datetime.date.today()
-    days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-    print(date, ' : ', days[date.weekday()])
-
-print_date_and_day_of_week()
-
-class Birthday():
-    def __init__(self, year, month, day):
-        self.year = year
-        self.month = month
-        self.day = day
-
-def time_to_next_birthday(b):
-    birth = datetime.datetime(b.year, b.month, b.day)
-    time = datetime.datetime.now()
-
-    if (time.month, time.day) < (birth.month, birth.day):
-        next_bday = (time.year, b.month, b.day)
-    else:
-        next_bday = (time.year + 1, b.month, b.day)
-
-    print('your age: ', time.year - birth.year - ((time.month, time.day) < (birth.month, birth.day)))
-    print('time to next birthday: ', (datetime.datetime(next_bday[0],next_bday[1],next_bday[2])-time).days, 'days ;)')
-
-time_to_next_birthday(Birthday(1995,11,2))
+class Kangaroo(object):
+    def __init__(self, pouch_contents=None):
+        if pouch_contents == None:
+            pouch_contents = []
+        self.pouch_contents = pouch_contents
 
 
-def find_older(b1,b2):
-    return (b1,b2) if (datetime.datetime(b1.year,b1.month,b1.day)-datetime.datetime(b2.year,b2.month,b2.day)).days < 0 else (b2,b1)
+    def __str__(self):
+        t = [ object.__str__(self) + ' with pouch contents:' ]
 
-def return_date(date):
-    return '%.2d-%.2d-%.2d' % (date.year, date.month, date.day)
+        for obj in self.pouch_contents:
+            s = '    ' + object.__str__(obj)
+            t.append(s)
+        return '\n'.join(t)
 
-
-def find_double_day(b1, b2):
-
-    st = find_older(b1,b2)
-    date = datetime.datetime(st[1].year,st[1].month,st[1].day)
-
-    x = (datetime.datetime(st[1].year,st[1].month,st[1].day)-datetime.datetime(st[0].year,st[0].month,st[0].day)).days
-    y = 0
-    
-    while x != 2*y:
-        x+=1
-        y+=1
-        date += datetime.timedelta(days=1)
-
-    print(return_date(date))
-    print('Older guy was ', (date - datetime.datetime(st[0].year,st[0].month,st[0].day)).days, ' days old, and younger dude was ', (date - datetime.datetime(st[1].year,st[1].month,st[1].day)).days, ' days old')
-
-find_double_day(Birthday(2012,7,18), Birthday(1997,6,12))
+    def put_in_pouch(self, obj):
+        self.pouch_contents.append(obj)
 
 
+kanga = Kangaroo()
+roo = Kangaroo()
+kanga.put_in_pouch(24)
+kanga.put_in_pouch('car keys')
+kanga.put_in_pouch(roo)
 
-def find_n_times_day(b1, b2, n):
-
-    st = find_older(b1,b2)
-    date = datetime.datetime(st[1].year,st[1].month,st[1].day)
-
-    x = (datetime.datetime(st[1].year,st[1].month,st[1].day)-datetime.datetime(st[0].year,st[0].month,st[0].day)).days
-    y = 0
-
-    while x != n*y:
-        if n*y > x:
-            print('This never precisely occurred')
-            return None
-        x+=1
-        y+=1
-        date += datetime.timedelta(days=1)
-
-    print(return_date(date))
-    print('Older guy was ', (date - datetime.datetime(st[0].year,st[0].month,st[0].day)).days, ' days old, and younger dude was ', (date - datetime.datetime(st[1].year,st[1].month,st[1].day)).days, ' days old')
+print(kanga)
+print("roo: ", roo)
