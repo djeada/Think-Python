@@ -29,3 +29,37 @@ My alternative solutions to problems from Allen B. Downey's book "Think Python".
 </tr>
 </tbody>
 </table>
+
+<h1>Chapter 4</h1>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Exercise 1</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter4/Exercise1.py">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Exercise 2</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter4/Exercise2.py">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Exercise 3</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter4/Exercise3.py">Python</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Exercise 3</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter4/Exercise5.py">Python</a></td>
+</tr>
+</tbody>
+</table>
