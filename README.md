@@ -363,3 +363,255 @@ My alternative solutions to problems from Allen B. Downey's book "Think Python".
 </tr>
 </tbody>
 </table>
+
+
+<h1>Chapter 11</h1>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Exercise 1</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter11/Exercise1.py">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Exercise 2</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter11/Exercise2.py">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Exercise 3</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter11/Exercise3.py">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Exercise 4</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter11/Exercise4.py">Python</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Exercise 5</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter11/Exercise5.py">Python</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Exercise 6</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter11/Exercise6.py">Python</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Exercise 7</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter11/Exercise7.py">Python</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Exercise 8</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter11/Exercise8.py">Python</a></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Exercise 9</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter11/Exercise9.py">Python</a></td>
+</tr>
+<tr>
+<td>10</td>
+<td>Exercise 10</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter11/Exercise10.py">Python</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td>Exercise 11</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter11/Exercise11.py">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+
+<h1>Chapter 12</h1>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Exercise 1</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter12/Exercise1.py">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Exercise 2</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter12/Exercise2.py">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Exercise 3</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter12/Exercise3.py">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Exercise 4</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter12/Exercise4.py">Python</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Exercise 5</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter12/Exercise5.py">Python</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Exercise 6</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter12/Exercise6.py">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+<h1>Chapter 13</h1>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Exercise 1</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter13/Exercise1.py">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Exercise 2</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter13/Exercise2.py">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Exercise 3</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter13/Exercise3.py">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Exercise 4</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter13/Exercise4.py">Python</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Exercise 5</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter13/Exercise5.py">Python</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Exercise 6</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter13/Exercise6.py">Python</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Exercise 7</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter13/Exercise7.py">Python</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Exercise 8</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter13/Exercise8.py">Python</a></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Exercise 9</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter13/Exercise9.py">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+<h1>Chapter 14</h1>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Exercise 1</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter14/Exercise1.py">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Exercise 2</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter14/Exercise2.py">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Exercise 3</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter14/Exercise3.py">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Exercise 4</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter14/Exercise4.py">Python</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Exercise 5</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter14/Exercise5.py">Python</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Exercise 6</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter14/Exercise6.py">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+<h1>Chapter 15</h1>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Exercise 1</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter15/Exercise1.py">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Exercise 2</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter15/Exercise2.py">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Exercise 3</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter15/Exercise3.py">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Exercise 4</td>
+<td><a href="https://github.com/djeada/thinkPython/blob/master/src/Chapter15/Exercise4.py">Python</a></td>
+</tr>
+</tbody>
+</table>
