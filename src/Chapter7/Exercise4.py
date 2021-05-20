@@ -1,4 +1,4 @@
-'''
+"""
 Exercise 4  
 The built-in function eval takes a string and evaluates
 it using the Python interpreter. For example:
@@ -17,16 +17,18 @@ the result.
 
 It should continue until the user enters 'done', and then return
 the value of the last expression it evaluated.
-'''
+"""
+
 
 def eval_loop(s):
     print(eval(s))
 
+
 while True:
     line = input('type "done" to exit\n')
-    
-    if  line == 'done':
+
+    if line == "done":
         break
-    
+
     else:
         eval_loop(line)

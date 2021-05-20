@@ -1,4 +1,4 @@
-'''
+"""
 Exercise 2
 Write a function called sed that takes as arguments a pattern string, a
 replacement string, and two filenames; it should read the first file and
@@ -8,14 +8,15 @@ replacement string.
 
 If an error occurs while opening, reading, writing or closing files, your
 program should catch the exception, print an error message, and exit.
-'''
+"""
 
 import os
 
+
 def sed(pattern, replace, source, dest):
     try:
-        fin = open(source, 'r')
-        fout = open(dest, 'w')
+        fin = open(source, "r")
+        fout = open(dest, "w")
 
         for line in fin:
             line = line.replace(pattern, replace)
@@ -24,11 +25,11 @@ def sed(pattern, replace, source, dest):
         fin.close()
         fout.close()
     except:
-        print('error')
+        print("error")
 
 
-pattern = 'test'
-replace = 'halo'
-source = 'test.txt'
-dest = 'replaced.txt'
+pattern = "test"
+replace = "halo"
+source = "test.txt"
+dest = "replaced.txt"
 sed(pattern, replace, source, dest)

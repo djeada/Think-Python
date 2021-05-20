@@ -1,4 +1,4 @@
-'''
+"""
 Exercise 7
 This exercise is a cautionary tale about one of the most common, and difficult
 to find, errors in Python. Write a definition for a class named Kangaroo with
@@ -13,7 +13,8 @@ Download http://thinkpython.com/code/BadKangaroo.py. It contains a solution to
 the previous problem with one big, nasty bug. Find and fix the bug.
 
 If you get stuck, you can download http://thinkpython.com/code/GoodKangaroo.py, which explains the problem and demonstrates a solution.
-'''
+"""
+
 
 class Kangaroo(object):
     def __init__(self, pouch_contents=None):
@@ -21,14 +22,13 @@ class Kangaroo(object):
             pouch_contents = []
         self.pouch_contents = pouch_contents
 
-
     def __str__(self):
-        t = [ object.__str__(self) + ' with pouch contents:' ]
+        t = [object.__str__(self) + " with pouch contents:"]
 
         for obj in self.pouch_contents:
-            s = '    ' + object.__str__(obj)
+            s = "    " + object.__str__(obj)
             t.append(s)
-        return '\n'.join(t)
+        return "\n".join(t)
 
     def put_in_pouch(self, obj):
         self.pouch_contents.append(obj)
@@ -37,7 +37,7 @@ class Kangaroo(object):
 kanga = Kangaroo()
 roo = Kangaroo()
 kanga.put_in_pouch(24)
-kanga.put_in_pouch('car keys')
+kanga.put_in_pouch("car keys")
 kanga.put_in_pouch(roo)
 
 print(kanga)

@@ -1,4 +1,4 @@
-'''
+"""
 Exercise 2  
 Dictionaries have a method called get that takes a key and
 a default value. If the key appears in the dictionary, get
@@ -12,7 +12,8 @@ default value. For example:
 1
 >>> h.get('b', 0)
 0
-'''
+"""
+
 
 def histogram(word):
     dictionary = dict()
@@ -23,6 +24,6 @@ def histogram(word):
             dictionary[c] = dictionary[c] + 1
     return dictionary
 
-h = histogram('wifi')
-print(h.get('i'))
 
+h = histogram("wifi")
+print(h.get("i"))

@@ -1,4 +1,4 @@
-'''
+"""
 Exercise 8
 Markov analysis:
 
@@ -25,31 +25,34 @@ text from two or more books, the random text you generate will blend the
 vocabulary and phrases from the sources in interesting ways.
 Credit: This case study is based on an example from Kernighan and Pike, The
 Practice of Programming, Addison-Wesley, 1999.
-'''
+"""
 import sys
 from string import punctuation, whitespace
 import random
 
-suffix_map = {}     
+suffix_map = {}
 prefix = ()
 
-with open('pride_and_prejudice.txt', 'r') as fd:
+with open("pride_and_prejudice.txt", "r") as fd:
     for line in fd:
-        if 'Chapter ' in line:
-            word_list = [line.rstrip('\n')]
+        if "Chapter " in line:
+            word_list = [line.rstrip("\n")]
             for line in fd:
-                line = line.rstrip('\n')
+                line = line.rstrip("\n")
                 word_list.append(line)
 
+
 def clean_word(word):
-    clean = ''
+    clean = ""
     for c in word:
         if not (c in punctuation or c in whitespace):
             clean += c.lower()
     return clean
 
+
 def shift(t, word):
     return t[1:] + (word,)
+
 
 def process_word(word, order=2):
     global prefix
@@ -63,24 +66,26 @@ def process_word(word, order=2):
         suffix_map[prefix] = [word]
 
     prefix = shift(prefix, word)
-    
+
+
 word_list = [clean_word(x) for x in word_list]
 
 for word in word_list:
     process_word(word)
 
+
 def random_text(n=100):
     start = random.choice(list(suffix_map.keys()))
-    
+
     for i in range(n):
         suffixes = suffix_map.get(start, None)
         if suffixes == None:
-            random_text(n-i)
+            random_text(n - i)
             return
 
         word = random.choice(suffixes)
         print(word)
         start = shift(start, word)
 
-random_text()
 
+random_text()

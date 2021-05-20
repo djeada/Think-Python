@@ -1,4 +1,4 @@
-'''
+"""
 Exercise 5
 The greatest common divisor (GCD) of a and b is the largest
 number that divides both of them with no remainder.
@@ -10,7 +10,8 @@ we can use gcd(a, 0) = a.
 
 Write a function called gcd that takes parameters a and b
 and returns their greatest common divisor.
-'''
+"""
+
 
 def gcd(a, b):
     if b == 0:
@@ -18,9 +19,6 @@ def gcd(a, b):
     r = a % b
     return gcd(b, r)
 
+
 print(gcd(11, 24))
 print(gcd(16, 160))
-
-    
-
-

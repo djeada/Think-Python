@@ -1,9 +1,10 @@
-'''
+"""
 Exercise 4  
 Modify reverse_lookup so that it builds and returns
 a list of all keys that map to v, or an empty list if
 there are none.
-'''
+"""
+
 
 def histogram(word):
     dictionary = dict()
@@ -14,6 +15,7 @@ def histogram(word):
             dictionary[c] = dictionary[c] + 1
     return dictionary
 
+
 def reverse_lookup(histogram, value):
     lista = []
     for x in histogram:
@@ -22,4 +24,4 @@ def reverse_lookup(histogram, value):
     return lista
 
 
-print(reverse_lookup(histogram('pipi ponczoszanka'),2))
+print(reverse_lookup(histogram("pipi ponczoszanka"), 2))

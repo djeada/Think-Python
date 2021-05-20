@@ -1,4 +1,4 @@
-'''
+"""
 Exercise 9
 If you did Exercise 8,you already have a function named
 has_duplicates that takes a list as a parameter and returns
@@ -7,7 +7,8 @@ the list.
 
 Use a dictionary to write a faster, simpler version of
 has_duplicates.
-'''
+"""
+
 
 def has_duplicates(word):
     dictionary = dict()
@@ -17,4 +18,5 @@ def has_duplicates(word):
         dictionary[c] = 1
     return False
 
-print(has_duplicates('baba jaga'))
+
+print(has_duplicates("baba jaga"))

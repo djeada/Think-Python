@@ -1,9 +1,10 @@
-'''
+"""
 Exercise 7
 Two words are anagrams if you can rearrange the letters from one to
 spell the other. Write a function called is_anagram that takes two
 strings and returns True if they are anagrams.
-'''
+"""
+
 
 def count_freq(slowo):
     slownik = dict()
@@ -14,9 +15,11 @@ def count_freq(slowo):
             slownik[x] = slownik[x] + 1
     return slownik
 
-def is_anagram(a,b):
+
+def is_anagram(a, b):
     if count_freq(a) == count_freq(b):
         return True
     return False
 
-print(is_anagram('kajak','ajkak'))
+
+print(is_anagram("kajak", "ajkak"))

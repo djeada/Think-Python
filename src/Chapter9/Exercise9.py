@@ -1,4 +1,4 @@
-'''
+"""
 Exercise 9
 “Recently I had a visit with my mom and we realized that the
 two digits that make up my age when reversed resulted in her
@@ -11,50 +11,59 @@ if we’re lucky it would happen again in a few years, and if
 we’re really lucky it would happen one more time after that.
 In other words, it would have happened
 8 times over all. So the question is, how old am I now?”
-'''
+"""
 
-def is_reverse(a,b):
+
+def is_reverse(a, b):
     if str(a) == str(b)[::-1]:
         return True
     return False
 
+
 def add_diff(dictionary, diff):
-        if diff not in dictionary:
-            dictionary[diff] = 1
-        else:
-            dictionary[diff] = dictionary[diff] + 1
+    if diff not in dictionary:
+        dictionary[diff] = 1
+    else:
+        dictionary[diff] = dictionary[diff] + 1
+
 
 def display_result(dictionary):
     for key in dictionary:
-        print('For difference of ages', key, ' ages of daughter and mother would be anagrams', dictionary[key], ' times.')
+        print(
+            "For difference of ages",
+            key,
+            " ages of daughter and mother would be anagrams",
+            dictionary[key],
+            " times.",
+        )
+
 
 def generate_ages():
     dictionary = dict()
     a = 10
     diff = 9
     while diff < 80:
-        while a < 90: 
-            if is_reverse(a,a+diff):
-                add_diff(dictionary,diff)
+        while a < 90:
+            if is_reverse(a, a + diff):
+                add_diff(dictionary, diff)
             a += 1
         a = 10
         diff += 1
 
     display_result(dictionary)
 
+
 generate_ages()
+
 
 def how_old_is_she(diff):
     counter = 0
     for i in range(100):
-        if is_reverse(i,i+diff):
+        if is_reverse(i, i + diff):
             counter += 1
             if counter == 6:
-                print('Daughter is now ', i, ' years old.')
+                print("Daughter is now ", i, " years old.")
                 break
 
+
 how_old_is_she(9)
-
-
-
-

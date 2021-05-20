@@ -1,9 +1,10 @@
-'''
+"""
 Exercise 6
 Rewrite this function so that instead of traversing the string,
 it uses the three-parameter version of find from the previous
 section.
-'''
+"""
+
 
 def find(letter, word, index):
     while index < len(word):
@@ -25,5 +26,5 @@ def count(letter, word):
         index = result + 1
     return counter
 
-print(count('i', 'alaikum al ibadatu'))
 
+print(count("i", "alaikum al ibadatu"))

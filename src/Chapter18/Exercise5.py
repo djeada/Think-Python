@@ -1,4 +1,4 @@
-'''
+"""
 Exercise 5
 The following are the possible hands in poker, in increasing order of value (and decreasing order of probability):
 
@@ -31,20 +31,36 @@ PokerHand.py
 5. When you are convinced that your classification methods are working, the next step is to estimate the probabilities of the various hands. Write a function in PokerHand.py that shuffles a deck of cards, divides it into hands, classifies the hands, and counts the number of times various classifications appear.
 6. Print a table of the classifications and their probabilities. Run your program with larger and larger numbers of hands until the output values converge to a reasonable degree of accuracy. Compare your results to the values at http://en.wikipedia.org/wiki/Hand_rankings.
 Solution: http://thinkpython.com/code/PokerHandSoln.py.
-'''
+"""
 
 import random
 
-class Card():
+
+class Card:
     def __init__(self, suit=0, rank=2):
         self.suit = suit
         self.rank = rank
 
-    suit_names = ['Clubs', 'Diamonds', 'Hearts', 'Spades']
-    rank_names = [None, 'Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
+    suit_names = ["Clubs", "Diamonds", "Hearts", "Spades"]
+    rank_names = [
+        None,
+        "Ace",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "Jack",
+        "Queen",
+        "King",
+    ]
 
     def __str__(self):
-        return '%s of %s' % (Card.rank_names[self.rank], Card.suit_names[self.suit])
+        return "%s of %s" % (Card.rank_names[self.rank], Card.suit_names[self.suit])
 
     def __gt__(self, other):
         if self.suit < other.suit:
@@ -61,8 +77,9 @@ class Card():
             if self.rank > other.rank:
                 return False
         return True
-        
-class Deck():
+
+
+class Deck:
     def __init__(self):
         self.cards = []
         for suit in range(4):
@@ -84,36 +101,36 @@ class Deck():
 
     def shuffle(self):
         random.shuffle(self.cards)
-    
+
     def sort(self):
         for j in range(len(self.cards)):
-            for i in range(len(self.cards)-1):
-                if self.cards[i] > self.cards[i+1]:
+            for i in range(len(self.cards) - 1):
+                if self.cards[i] > self.cards[i + 1]:
                     temp = self.cards[i]
-                    self.cards[i] = self.cards[i+1]
-                    self.cards[i+1] = temp
+                    self.cards[i] = self.cards[i + 1]
+                    self.cards[i + 1] = temp
 
     def deal_hands(self, num_hands, num_cards):
         if (num_hands * num_cards) > len(self.cards):
-            print('Ich habe keine mehr!')
+            print("Ich habe keine mehr!")
             return
         else:
             lista = []
             for x in range(num_hands):
-                    hand = Hand()
-                    for y in range(num_cards):
-                        hand.cards.append(self.cards.pop())
-                    lista.append(hand)
+                hand = Hand()
+                for y in range(num_cards):
+                    hand.cards.append(self.cards.pop())
+                lista.append(hand)
             return lista
-    
 
-class Hand():
-    def __init__(self, label=''):
+
+class Hand:
+    def __init__(self, label=""):
         self.cards = []
         self.label = label
 
     def __str__(self):
-        return ', '.join(str(x) for x in self.cards)
+        return ", ".join(str(x) for x in self.cards)
 
 
 def find_defining_class(obj, method_name):
@@ -124,7 +141,6 @@ def find_defining_class(obj, method_name):
 
 
 class PokerHand(Hand):
-
     def suit_hist(self):
         self.suits = {}
         for card in self.cards:
@@ -156,7 +172,6 @@ class PokerHand(Hand):
                 return True
         return False
 
-
     def has_straight(self):
         self.rank_hist()
         if 1 in self.ranks.keys():
@@ -171,7 +186,6 @@ class PokerHand(Hand):
                 return True
         return False
 
-
     def has_full_house(self):
         self.rank_hist()
 
@@ -184,14 +198,12 @@ class PokerHand(Hand):
                     return True
         return False
 
-
     def has_four_of_a_kind(self):
         self.rank_hist()
         for val in self.ranks.keys():
             if val == 4:
                 return True
         return False
-
 
     def has_straight_flush(self):
         if not self.has_straight() and not self.has_flush():
@@ -244,12 +256,14 @@ def find_probabilities(num_of_decks):
                 probability_histo[item] = probability_histo.get(item, 0) + 1
 
     for type_hand in probability_histo.keys():
-        probability_histo[type_hand] = str(probability_histo[type_hand] / float(total_num_hands) * 100) + " %"
+        probability_histo[type_hand] = (
+            str(probability_histo[type_hand] / float(total_num_hands) * 100) + " %"
+        )
 
     print(probability_histo)
 
+
 deck1 = Deck()
 deck1.shuffle()
-for x in deck1.deal_hands(5,5):
+for x in deck1.deal_hands(5, 5):
     print(x)
-    

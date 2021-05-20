@@ -1,4 +1,4 @@
-'''
+"""
 Exercise 8
 I was driving on the highway the other day and I happened to
 notice my odometer. Like most odometers, it shows six digits,
@@ -13,32 +13,31 @@ One mile after that, the middle 4 out of 6 numbers were
 palindromic. And you ready for this? One mile later, all 6 were
 palindromic! The question is, what was on the odometer when
 I first looked?”
-'''
+"""
+
 
 def is_palindrome(num):
     if str(num) == str(num)[::-1]:
         return True
     return False
 
+
 def get_digits(num, start, finish):
-    return int(str(num)[start:finish+1])
+    return int(str(num)[start : finish + 1])
+
 
 def generate_Palindromes():
     lista = []
     number = 100000
     while number < 1000000:
-        if is_palindrome(get_digits(number,2,5)):
-            if is_palindrome(get_digits(number+1,1,5)):
-                if is_palindrome(get_digits(number+2,1,4)):
-                    if is_palindrome(number+3):
+        if is_palindrome(get_digits(number, 2, 5)):
+            if is_palindrome(get_digits(number + 1, 1, 5)):
+                if is_palindrome(get_digits(number + 2, 1, 4)):
+                    if is_palindrome(number + 3):
                         lista.append(number)
-        number +=1
+        number += 1
     return lista
+
 
 for x in generate_Palindromes():
     print(x)
-
-
-
-
-

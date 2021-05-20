@@ -1,4 +1,4 @@
-'''
+"""
 Exercise 8
 The (so-called) Birthday Paradox:
 
@@ -12,8 +12,9 @@ by generating random samples of 23 birthdays and checking for matches.
 
 Hint: you can generate random birthdays with the randint function
 in the random module.
-'''
+"""
 import random
+
 
 def count_freq(slowo):
     slownik = dict()
@@ -24,6 +25,7 @@ def count_freq(slowo):
             slownik[x] = slownik[x] + 1
     return slownik
 
+
 def has_duplicates(lista):
     slownik = count_freq(lista)
     for x in slownik:
@@ -31,14 +33,15 @@ def has_duplicates(lista):
             return True
     return False
 
+
 lista = []
 
 for x in range(23):
-    lista.append((random.randint(1,31),random.randint(1,12)))
+    lista.append((random.randint(1, 31), random.randint(1, 12)))
 
 
 slownik = count_freq(lista)
 for x in slownik:
-    print(x, ' appeares ', slownik[x], ' times.')
+    print(x, " appeares ", slownik[x], " times.")
 
 print(has_duplicates(lista))

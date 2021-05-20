@@ -1,4 +1,4 @@
-'''
+"""
 Exercise 2  
 If you are given three sticks, you may or may not be able
 to arrange them in a triangle. For example, if one of the
@@ -21,7 +21,8 @@ Write a function that prompts the user to input three
 stick lengths, converts them to integers, and uses is_triangle
 to check whether sticks with the given lengths can form
 a triangle.
-'''
+"""
+
 
 def is_triangle(a, b, c, n):
     if a < b + c and b < a + c and c < b + a:
@@ -29,10 +30,12 @@ def is_triangle(a, b, c, n):
     else:
         print("You can't form a triangle.")
 
+
 def function():
-    a = int(input('input a: '))
-    b = int(input('input b: '))
-    c = int(input('input c: '))
+    a = int(input("input a: "))
+    b = int(input("input b: "))
+    c = int(input("input c: "))
     return is_triangle(a, b, c)
+
 
 function()

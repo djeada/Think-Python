@@ -1,4 +1,4 @@
-'''
+"""
 Exercise 5
 What is the longest English word, that remains a valid English word, as you
 remove its letters one at a time?
@@ -25,22 +25,23 @@ a base case, you can consider the empty string reducible.
 So you might want to add "I", "a", and the empty string.
 4. To improve the performance of your program, you might want to memoize
 the words that are known to be reducible.
-'''
+"""
 
-with open('words.txt') as fd:
+with open("words.txt") as fd:
     word_list = fd.read().splitlines()
 
-word_list.append('a')
-word_list.append('I')
+word_list.append("a")
+word_list.append("I")
 
 memo = dict()
-memo[''] = ['']
+memo[""] = [""]
+
 
 def child_list(word, word_list):
     lista = []
     for c in word:
-        if word.replace(c,'') in word_list:
-            lista.append(word.replace(c,''))
+        if word.replace(c, "") in word_list:
+            lista.append(word.replace(c, ""))
     return lista
 
 
@@ -51,16 +52,17 @@ def is_reducible(word, word_list):
     if len(word) == 1:
         memo[word] = True
         return True
-        
+
     for child in child_list(word, word_list):
         if child not in word_list:
             memo[child] = False
             return False
         else:
-            return is_reducible(child,word_list)
+            return is_reducible(child, word_list)
+
 
 def find_longest(word_list):
-    longest = ''
+    longest = ""
     for word in word_list:
         if is_reducible(word, word_list):
             if len(word) > len(longest):
@@ -68,8 +70,7 @@ def find_longest(word_list):
                 longest = word
     return longest
 
-print(is_reducible('temperances',word_list))
+
+print(is_reducible("temperances", word_list))
 
 print(find_longest(word_list))
-
-

@@ -1,4 +1,4 @@
-'''
+"""
 Exercise5
 This exercise can be done using only the statements and
 other features we have learned so far.
@@ -34,37 +34,46 @@ goes to the next line.
 
 Write a function that draws a similar grid with four rows
 and four columns.                                                              allen
-'''
+"""
+
 
 def do_twice(f):
     f()
     f()
 
+
 def do_four(f):
     do_twice(f)
     do_twice(f)
 
+
 def print_plus():
-    print('+',end='')
+    print("+", end="")
+
 
 def print_line():
-    print(' -',end='')
+    print(" -", end="")
+
 
 def print_column():
-    print('|',end='')
+    print("|", end="")
+
 
 def print_space():
-    print(' ',end='')
+    print(" ", end="")
+
 
 def print_line_one():
     print_plus()
     do_four(print_line)
     print_space()
-    
+
+
 def print_line_two():
     do_twice(print_line_one)
     print_plus()
-    print('')
+    print("")
+
 
 def print_line_three():
     print_column()
@@ -72,10 +81,12 @@ def print_line_three():
     print_space()
     do_four(print_space)
 
+
 def print_line_four():
     do_twice(print_line_three)
     print_column()
-    print('')
+    print("")
+
 
 def print_grid():
     print_line_two()
@@ -83,5 +94,6 @@ def print_grid():
     print_line_two()
     do_four(print_line_four)
     print_line_two()
+
 
 print_grid()

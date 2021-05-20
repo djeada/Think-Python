@@ -1,4 +1,4 @@
-'''
+"""
 Exercise 11
 This was sent in by a fellow named Dan O’Leary. He came upon a
 common one-syllable, five-letter word recently that has the
@@ -22,38 +22,39 @@ But there is, however, at least one word that Dan and we know
 of, which will yield two homophones if you remove either of the
 first two letters to make two, new four-letter words. The
 question is, what’s the word?
-'''
+"""
+
 
 def read_dict():
     pronunciation = {}
 
-    with open('c06d.txt') as fd:
+    with open("c06d.txt") as fd:
         for line in fd:
-            index = line.find(' ')
-            word = line[:index] 
-            pron = line[index+2:]
+            index = line.find(" ")
+            word = line[:index]
+            pron = line[index + 2 :]
             pronunciation[word] = pron
 
     return pronunciation
+
 
 def are_homophones(d, a, b, c):
     try:
         return d[c] == d[b] == d[c]
     except KeyError:
         return False
-    
+
+
 def find_homophones(pron_dict):
     homophones = []
-    
-    for word in pron_dict:    
+
+    for word in pron_dict:
         if are_homophones(pron_dict, word, word[1:], word[0] + word[2:]):
-                homophones.append((word, word[1:], word[0] + word[2:]))
+            homophones.append((word, word[1:], word[0] + word[2:]))
     return homophones
+
 
 for x in find_homophones(read_dict()):
     print(x)
 
 print(len(find_homophones(read_dict())))
-
-
-

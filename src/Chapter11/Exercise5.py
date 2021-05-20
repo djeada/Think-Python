@@ -1,8 +1,9 @@
-'''
+"""
 Exercise 5 
 Read the documentation of the dictionary method setdefault and
 use it to write a more concise version of invert_dict.
-'''
+"""
+
 
 def histogram(word):
     dictionary = dict()
@@ -13,6 +14,7 @@ def histogram(word):
             dictionary[c] = dictionary[c] + 1
     return dictionary
 
+
 def invert_dict(histogram):
     inv = dict()
     for x in histogram:
@@ -22,4 +24,5 @@ def invert_dict(histogram):
             inv[histogram[x]] = list(inv[histogram[x]]) + list(x)
     return inv
 
-print(invert_dict(histogram('parrot')))
+
+print(invert_dict(histogram("parrot")))

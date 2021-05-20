@@ -1,24 +1,26 @@
-'''
+"""
 Exercise 6
 Download the code from this chapter (http://thinkpython.com/code/Time2.py).
 Change the attributes of Time to be a single integer representing seconds
 since midnight. Then modify the methods (and the function int_to_time) to
 work with the new implementation. You should not have to modify the test
 code in main. When you are done, the output should be the same as before.
-'''
+"""
+
 
 class Time(object):
     """Represents the time of day.
 
     attributes: hour, minute, second
     """
+
     def __init__(self, hour=0, minute=0, second=0):
         self.second = (((hour * 60) + minute) * 60) + second
 
     def __str__(self):
         minutes, seconds = divmod(self.second, 60)
         hours, minutes = divmod(minutes, 60)
-        return '%.2d:%.2d:%.2d' % (hours, minutes, seconds)
+        return "%.2d:%.2d:%.2d" % (hours, minutes, seconds)
 
     def print_time(self):
         print(self)
@@ -78,10 +80,10 @@ def main():
     end = start.increment(1337)
     end.print_time()
 
-    print('Is end after start?')
+    print("Is end after start?")
     print(end.is_after(start))
 
-    print('Using __str__')
+    print("Using __str__")
     print(start, end)
 
     start = Time(9, 45)
@@ -90,7 +92,7 @@ def main():
     print(start + 1337)
     print(1337 + start)
 
-    print('Example of polymorphism')
+    print("Example of polymorphism")
     t1 = Time(7, 43)
     t2 = Time(7, 41)
     t3 = Time(7, 37)

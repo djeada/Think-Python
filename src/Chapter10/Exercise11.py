@@ -1,4 +1,4 @@
-'''
+"""
 Exercise 11
 To check whether a word is in the word list, you could use the in
 operator, but it would be slow because it searches through the words
@@ -19,28 +19,27 @@ or conclude that it’s not there.
 Write a function called bisect that takes a sorted list and a target
 value and returns the index of the value in the list, if it’s there,
 or None if it’s not.
-'''
-with open('words.txt', 'r') as fd:
+"""
+with open("words.txt", "r") as fd:
     word_list = fd.read().splitlines()
+
 
 def binary(lista, x):
     l = 0
     r = len(lista)
 
     while l <= r:
-        mid = l + int((r-l)/2)
+        mid = l + int((r - l) / 2)
 
         if lista[mid] == x:
             return mid
-        
+
         elif lista[mid] < x:
             l = mid + 1
-            
+
         else:
             r = mid - 1
     return None
 
-print(binary(word_list, 'sex'))
 
-
-
+print(binary(word_list, "sex"))
