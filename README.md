@@ -1,5 +1,5 @@
 # thinkPython
-My alternative solutions to problems from Allen B. Downey's book "Think Python".
+My alternatives to the challenges in Allen B. Downey's book "Think Python."
 
 <h1>Chapter 3</h1>
 
