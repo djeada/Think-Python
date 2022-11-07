@@ -777,3 +777,11 @@ It is a free book and you can read it on the author's page: <a href="https://gre
         </tr>
     </tbody>
 </table>
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
